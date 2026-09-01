@@ -1,3 +1,4 @@
+import { ParallaxImage } from './parallax-image'
 import { Reveal } from './reveal'
 
 const YEAR = new Date().getFullYear()
@@ -5,6 +6,26 @@ const YEAR = new Date().getFullYear()
 export function SiteFooter() {
   return (
     <footer id="contact" className="bg-ink text-ink-foreground">
+      {/* Closing image band — a last, quiet frame before the sign-off */}
+      <Reveal className="reveal-clip relative">
+        <ParallaxImage
+          src="/images/detail-material.png"
+          alt="A palette of travertine, bronze, oak and linen"
+          sizes="100vw"
+          speed={0.08}
+          className="h-[46svh] min-h-[320px] w-full"
+        />
+        <div className="absolute inset-0 bg-ink/40" />
+        <div className="absolute inset-0 flex items-center">
+          <div className="mx-auto w-full max-w-[1600px] px-5 md:px-10">
+            <p className="max-w-xl text-balance font-serif text-2xl font-light italic leading-[1.3] text-ink-foreground/90 md:text-4xl">
+              &ldquo;Design that is less about a visual wrap, and more about how a space
+              feels to live and work in.&rdquo;
+            </p>
+          </div>
+        </div>
+      </Reveal>
+
       <div className="mx-auto max-w-[1600px] px-5 md:px-10">
         {/* CTA */}
         <div className="border-b border-ink-foreground/15 py-24 md:py-40">
@@ -29,7 +50,7 @@ export function SiteFooter() {
               <span className="transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
             </a>
             <a
-              href="tel:+9710000000000"
+              href="#top"
               className="inline-flex items-center gap-3 border border-ink-foreground/25 px-9 py-5 text-[11px] font-medium uppercase tracking-[0.22em] text-ink-foreground transition-colors duration-300 hover:border-bronze hover:text-bronze"
             >
               Book a Consultation

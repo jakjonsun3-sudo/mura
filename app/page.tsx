@@ -7,8 +7,6 @@ import { SelectedProjects } from '@/components/selected-projects'
 import { Services } from '@/components/services'
 import { SiteFooter } from '@/components/site-footer'
 import { SiteHeader } from '@/components/site-header'
-import { Stats } from '@/components/stats'
-import { Testimonial } from '@/components/testimonial'
 
 export default function Page() {
   return (
@@ -17,11 +15,9 @@ export default function Page() {
       <Hero />
       <Intro />
       <SelectedProjects />
-      <Categories />
       <FeaturedProject />
+      <Categories />
       <Services />
-      <Stats />
-      <Testimonial />
       <Process />
       <SiteFooter />
     </main>

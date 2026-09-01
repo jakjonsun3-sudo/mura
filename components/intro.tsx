@@ -1,5 +1,12 @@
 import { Reveal } from './reveal'
 
+const FIGURES = [
+  { value: '2006', label: 'Designing since' },
+  { value: '200+', label: 'Projects delivered' },
+  { value: '5.0', label: 'Google rating · 8 reviews' },
+  { value: 'Dubai', label: 'Business Bay studio' },
+]
+
 export function Intro() {
   return (
     <section id="studio" className="mx-auto max-w-[1600px] px-5 py-24 md:px-10 md:py-40">
@@ -33,6 +40,20 @@ export function Intro() {
             </Reveal>
           </div>
         </div>
+      </div>
+
+      {/* Verified figures — set as an editorial index line, not a stat grid */}
+      <div className="mt-20 grid grid-cols-2 gap-x-8 gap-y-12 border-t border-border pt-12 md:mt-28 md:grid-cols-4">
+        {FIGURES.map((f, i) => (
+          <Reveal key={f.label} className="rise" delay={i * 80}>
+            <p className="font-serif text-5xl font-light tracking-[-0.02em] md:text-6xl">
+              {f.value}
+            </p>
+            <p className="mt-4 text-[10px] uppercase tracking-[0.22em] text-muted-foreground">
+              {f.label}
+            </p>
+          </Reveal>
+        ))}
       </div>
     </section>
   )
